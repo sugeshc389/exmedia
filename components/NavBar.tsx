@@ -17,7 +17,8 @@ const NavBar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          EXMEDIA
+         
+          <img className="w-20 h-20" src="/exlogo.png" alt="" />
         </motion.span>
         <div className="flex gap-5">
           <a href="">
