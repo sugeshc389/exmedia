@@ -1,32 +1,37 @@
-import { NAV_LINKS } from "@/constants";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+// import { NAV_LINKS } from "@/constants";
+// import Image from "next/image";
+// import Link from "next/link";
+"use client";
+import SideBar from "./SideBar";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5 bg-blue-950 backdrop-blur-3xl ">
-      <Link href="/">
-        <Image src="/exlogo.png" alt="Logo" width={74} height={29} />
-      </Link>
-      <ul className="hidden h-full gap-12 lg:flex">
-        {NAV_LINKS.map((link) => (
-          <Link
-            href={link.href}
-            key={link.key}
-            className="regular-16 text-slate-100 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
-          >
-            {link.label}
-          </Link>
-        ))}
-      </ul>
-      <Image
-        src="menu.svg"
-        alt="Menu"
-        width={32}
-        height={32}
-        className="inline-block cursor-pointer lg:hidden"
-      />
+    <nav className="h-24">
+      {/* SIDE BAR */}
+      <SideBar />
+      <div className="max-w-2xl m-auto flex items-center justify-between h-full">
+        <motion.span
+          className="text-slate-300"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          EXMEDIA
+        </motion.span>
+        <div className="flex gap-5">
+          <a href="">
+            <img className="w-5 h-5" src="/facebook.png" alt="" />
+          </a>
+          <a href="">
+            <img className="w-5 h-5" src="/instagram.png" alt="" />
+          </a>
+
+          <a href="">
+            <img className="w-5 h-5" src="/youtube.png" alt="" />
+          </a>
+        </div>
+      </div>
     </nav>
   );
 };

@@ -1,12 +1,21 @@
-type ButtonProps = {
-    type:'button'|'submit';
-    title:string;
-    icon?:string;
-    variant:'btn_dark_green'
+import React from 'react';
 
-}
-const Button = ({type,title,icon,variant}:ButtonProps) => {
-  return <div>Button</div>;
+type ButtonProps = {
+  type: "button" | "submit";
+  title: string;
+  icon?: string;
+  onClick?: () => void;
+  className?: string;
+};
+
+const Button: React.FC<ButtonProps> = ({ type, title, icon, onClick, className }) => {
+  return (
+    <div className="text-center">
+      <button type={type} onClick={onClick} className={className}>
+        {title} {icon && <img src={icon} alt="Icon" />}
+      </button>
+    </div>
+  );
 };
 
 export default Button;
