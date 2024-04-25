@@ -41,7 +41,7 @@ const slideVariant = {
 
 const Banner = () => {
   return (
-    <div className="banner">
+    <div className="banner -z-10">
       <div className="max-w-2xl h-full m-auto">
         <motion.div
           variants={textVariant}
@@ -53,7 +53,7 @@ const Banner = () => {
             variants={textVariant}
             initial="initial"
             animate="animate"
-            className="text-slate-100 text-2xl tracking-wide"
+            className="text-slate-100 text-2xl tracking-wide font-bold"
           >
             CRAFTING BRAND IDENTITY CAPTURING MOMENTS
           </motion.h1>
