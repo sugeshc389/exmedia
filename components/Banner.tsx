@@ -75,7 +75,7 @@ const Banner = () => {
         </motion.div>
         <motion.div className="sidingTextContainer" variants={slideVariant} initial="initial" animate="animate"> EXMEDIA </motion.div>
         <div className="h-full absolute top-0 right-0">
-          <img src="/camera1.png" className="opacity-55" alt="" />
+          <img src="/camera1.png" className="opacity-55" alt="Camera" />
         </div>
       </div>
     </div>

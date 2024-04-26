@@ -10,7 +10,7 @@ const WhoWeAre = () => {
     offset: ["start start", "end start"],
   });
 
-  const xBg = useTransform(scrollYProgress, [1, 0], ["100%", "0%"]);
+  const xBg = useTransform(scrollYProgress, [0, 1], [ "0%","100%"]);
   return (
     <div className="h-full w-full relative flex items-center justify-center">
       <motion.div className="bg-[url('/stars.png')] h-screen w-screen ">
@@ -60,6 +60,9 @@ const WhoWeAre = () => {
               campaigns that captivate and resonate.
             </p>
           </motion.div>
+          <p className="text-slate-50 tracking-widest text-xs">
+            EXMEDIA - STUDIO | GRAPHICS | BRANDING
+          </p>
         </motion.div>
       </motion.div>
     </div>
