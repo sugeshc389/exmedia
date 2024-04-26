@@ -42,23 +42,23 @@ const slideVariant = {
 const Banner = () => {
   return (
     <div className="banner -z-10">
-      <div className="max-w-2xl h-full m-auto">
+      <div className="max-w-2xl h-full p-20">
         <motion.div
           variants={textVariant}
           initial="initial"
           animate="animate"
-          className="h-full flex flex-col justify-center gap-10"
+          className="h-full flex flex-col justify-center gap-9 "
         >
           <motion.h1
             variants={textVariant}
             initial="initial"
             animate="animate"
-            className="text-slate-100 text-2xl tracking-wide font-bold"
+            className="text-slate-100 text-5xl tracking-wider font-bold"
           >
             CRAFTING BRAND IDENTITY CAPTURING MOMENTS
           </motion.h1>
           <p className="text-slate-100">
-            SINCE 2006,EXMEDIA A HAS BEEN A TRAILBLAZING ADVERTISEMENT AGENCY
+            SINCE 2006,<span className="text-red-500">EXMEDIA</span> A HAS BEEN A TRAILBLAZING ADVERTISEMENT AGENCY
           </p>
           <Button
             type="button"
@@ -74,7 +74,7 @@ const Banner = () => {
           />
         </motion.div>
         <motion.div className="sidingTextContainer" variants={slideVariant} initial="initial" animate="animate"> EXMEDIA </motion.div>
-        <div className="h-full absolute top-0 right-0">
+        <div className="h-full absolute top-0 right-0 p-20">
           <img src="/camera1.png" className="opacity-55" alt="Camera" />
         </div>
       </div>

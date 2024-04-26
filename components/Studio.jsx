@@ -69,10 +69,10 @@ const Graphics = () => {
       <div className="listContainer p-5 ">
         <motion.div
           whileHover={{ background: "lightgray", color: "black" }}
-          className="p-12 border border-orange-400 "
+          className="p-5 border border-orange-400 "
         >
           <h2 className="text-orange-400 font-bold">STUDIO</h2>
-          <p className="p-5 text-justify">
+          <p className=" text-justify">
             Where Creativity Finds Its Canvas. Our Studio Is A Haven For
             Innovative Ideas, Bringing Visions To Life With Precision And
             Passion. With State-Of-The-Art Equipment And A Team Of Skilled
