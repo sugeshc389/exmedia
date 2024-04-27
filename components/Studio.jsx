@@ -68,8 +68,8 @@ const Graphics = () => {
       </div>
       <div className="listContainer p-5 ">
         <motion.div
-          whileHover={{ background: "lightgray", color: "black" }}
-          className="p-5 border border-orange-400 "
+          whileHover={{ color: "orange"}}
+          className="p-5 border border-orange-400 rounded-md"
         >
           <h2 className="text-orange-400 font-bold">STUDIO</h2>
           <p className=" text-justify">

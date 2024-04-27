@@ -53,7 +53,7 @@ const Banner = () => {
             variants={textVariant}
             initial="initial"
             animate="animate"
-            className="text-slate-100 text-5xl tracking-wider font-bold"
+            className="newFont"
           >
             CRAFTING BRAND IDENTITY CAPTURING MOMENTS
           </motion.h1>

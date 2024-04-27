@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jaldi:wght@700&family=Montserrat+Alternates:wght@800&family=Montserrat:wght@500&family=Raleway:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jaldi:wght@700&family=Montserrat+Alternates:wght@800&family=Montserrat:wght@500&family=Nabla&family=Raleway:wght@600&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -150,6 +152,7 @@ body {
   .get-app {
     @apply max-container relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
   }
+ 
   .banner {
     height: calc(100vh - 100px);
     background: linear-gradient(180deg, #0c0c1d, #111132);
@@ -183,6 +186,29 @@ body {
 
   .listContainer {
     flex: 2;
+  }
+  .newFont{
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "EDPT" 100,
+      "EHLT" 12;
+      font-size: 3rem;
+      
+  }
+  .animate-spin {
+    animation: spin 5s linear infinite; 
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
 

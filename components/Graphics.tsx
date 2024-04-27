@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const variants = {
   initial: {
     x: 1000,
-    y: 500,
+    y: 100,
     opacity: 0,
   },
   animate: {
@@ -25,7 +25,7 @@ const Graphics = () => {
       variants={variants}
       initial="initial"
       whileInView="animate"
-      className="text-slate-50 bg-slate-950"
+      className="text-slate-50 "
     >
       <div className="flex justify-around">
         <div>
@@ -42,8 +42,8 @@ const Graphics = () => {
       </div>
       <div className="p-6">
         <motion.div
-          whileHover={{ background: "lightgray", color: "black" }}
-          className="p-6 border border-orange-400 "
+          whileHover={{  color: "orange" }}
+          className="p-6 border border-orange-400 rounded-md"
         >
           <h2 className="text-orange-400">GRAPHICS</h2>
           <p className="text-justify">
