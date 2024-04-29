@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 interface ServiceItem {
   id: number;
@@ -15,10 +15,10 @@ const Single: React.FC<{ service: ServiceItem }> = ({ service }) => {
     target: ref,
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  // Convert y to a string using useTransform
+  const y = useTransform(scrollYProgress, [0, 1], ["-300px", "300px"]);
 
-  // Convert y to a Framer Motion style object
-  const styleProps = { y: y as MotionValue<string> }; 
+  const styleProps = { y };
 
   return (
     <section ref={ref} className="flex pl-[25%] ">
