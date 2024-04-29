@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+"use client";
+import React from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 interface ServiceItem {
   id: number;
@@ -10,7 +11,7 @@ interface ServiceItem {
 }
 
 const Single: React.FC<{ service: ServiceItem }> = ({ service }) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
   });
@@ -33,7 +34,7 @@ const Single: React.FC<{ service: ServiceItem }> = ({ service }) => {
 };
 
 const Page: React.FC = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["end end", "start start"],
