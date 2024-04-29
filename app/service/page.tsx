@@ -17,16 +17,17 @@ const Single: React.FC<{ service: ServiceItem }> = ({ service }) => {
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
-  const styleProps = { y: y as string }; // Explicitly cast y as string
+  // Convert y to a Framer Motion style object
+  const styleProps = { y: y as MotionValue<string> }; 
 
   return (
     <section ref={ref} className="flex pl-[25%] ">
       <div className="flex items-center justify-center w-[700px] h-[700px] gap-[50px] ">
         <img src={service.img} className="flex-1 h-[50%] object-cover border border-orange -z-10" alt="" />
-        <div style={styleProps} className="flex-1 ">
+        <motion.div style={styleProps} className="flex-1 ">
           <h1 className="font-extrabold">{service.title}</h1>
           <h3>{service.subTitle}</h3>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
