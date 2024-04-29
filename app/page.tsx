@@ -5,30 +5,31 @@ import WhoWeAre from "@/components/WhoWeAre";
 import Studio from "@/components/Studio";
 import Graphics from "@/components/Graphics";
 import Branding from "@/components/Branding";
-
+import MotionWrapper from "./motionProvider";
 
 export default function Home() {
   return (
-    <div>
-      <section>
-        <NavBar />
-        <Banner />
-      </section>
+    <MotionWrapper>
+      <div>
+        <section>
+          <NavBar />
+          <Banner />
+        </section>
 
-      <section>
-        <WhoWeAre />
-      </section>
+        <section>
+          <WhoWeAre />
+        </section>
 
-      <section className=" text-slate-300">
-        <Studio />
-      </section>
-      <section>
-        <Graphics />
-      </section>
-      <section className=" text-slate-300">
-        <Branding />
-      </section>
-     
-    </div>
+        <section className=" text-slate-300">
+          <Studio />
+        </section>
+        <section>
+          <Graphics />
+        </section>
+        <section className=" text-slate-300">
+          <Branding />
+        </section>
+      </div>
+    </MotionWrapper>
   );
 }
