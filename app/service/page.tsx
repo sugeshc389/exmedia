@@ -41,11 +41,12 @@ const Single: React.FC<{ service: ServiceItem }> = ({ service }) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const styleProps: StyleProps = { y };
   return (
     <section ref={ref} className="flex pl-[25%] ">
       <div className="flex items-center justify-center w-[700px] h-[700px] gap-[50px] ">
         <img src={service.img} className="flex-1 h-[50%] object-cover border border-orange -z-10" alt="" />
-        <div style={{ y }} className="flex-1 ">
+        <div style={styleProps} className="flex-1 ">
           <h1 className="font-extrabold">{service.title}</h1>
           <h3>{service.subTitle}</h3>
          
