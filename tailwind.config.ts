@@ -33,12 +33,12 @@ module.exports = {
         "bg-img-1": "url('/img-1.png')",
         "bg-img-2": "url('/img-2.png')",
         "feature-bg": "url('/feature-bg.png')",
-        pattern: "url('/pattern.png')",
+        "pattern": "url('/pattern.png')",
         "pattern-2": "url('/pattern-bg.png')",
-        stars: "url('/stars.png')",
+        "stars": "url('/stars.png')",
       },
-      screens: {
-        xs: "400px",
+      screens: { 
+        "xs": "300px",
         "3xl": "1680px",
         "4xl": "2200px",
       },

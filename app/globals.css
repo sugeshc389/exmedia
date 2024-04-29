@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jaldi:wght@700&family=Montserrat+Alternates:wght@800&family=Montserrat:wght@500&family=Nabla&family=Raleway:wght@600&display=swap');
 
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -159,6 +160,13 @@ body {
     overflow: hidden;
     position: relative;
   }
+  
+  @media screen and (max-width: 300px) {
+    .banner {
+      height: calc(100vh - 50px);
+    }
+  }
+  
   .sidingTextContainer {
     position: absolute;
     font-size: 50vh;
@@ -167,6 +175,21 @@ body {
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
+   
+  }
+  @media screen and (max-width: 300px) {
+    .sidingTextContainer{
+      font-size: 25vh;
+      width: 25%;
+      bottom: -50px;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .sidingTextContainer{
+      font-size: 30vh;
+      width: 25%;
+      bottom: -10px;
+    }
   }
   .textContainer {
     flex: 1;
@@ -187,7 +210,7 @@ body {
   .listContainer {
     flex: 2;
   }
-  .newFont{
+  .newFont {
     font-family: "Nabla", system-ui;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -195,9 +218,20 @@ body {
     font-variation-settings:
       "EDPT" 100,
       "EHLT" 12;
-      font-size: 3rem;
-      
+    font-size: 3rem;
   }
+  
+  @media screen and (max-width: 300px) {
+    .newFont {
+      font-size: 1rem; /* Increase font size for screens <= 300px */
+    }
+  }
+  @media screen and (max-width: 768px){
+    .newFont{
+      font-size:1.5rem;
+    }
+  }
+  
   .animate-spin {
     animation: spin 5s linear infinite; 
   }
@@ -210,6 +244,7 @@ body {
       transform: rotate(360deg);
     }
   }
+
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

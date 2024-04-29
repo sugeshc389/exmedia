@@ -1,22 +1,78 @@
-import React from 'react'
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { MdAttachEmail } from "react-icons/md";
+import { FaMobileRetro, FaLocationDot, FaRegCopyright } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-  //   <div className='text-slate-300'>  <section className="relative flex flex-col w-full pb-32 md:gap-28 lg:py-1 xl:flex-row">
-  //   <video className="w-full flex-1 object-cover" autoPlay loop muted>
-  //     <source
-  //       src="https://tecdn.b-cdn.net/img/video/Lines.mp4"
-  //       type="video/mp4"
-  //     />
-  //   </video>
-  //   <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-  //     <h1  className="text-blue-400 text-5xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(255,0,0,1)]  ">
-  //       START STRONG WITH EFFECTIVE BRANDING
-  //     </h1>
-  //   </div>
-  // </section></div>
-  <div>Footer</div>
-  )
-}
+    <div className="p-6 bg-slate-900 h-80 overflow-hidden">
+      <div className="grid grid-cols-4 grid-rows-4 gap-4">
+        <div className="row-span-3 p-16">
+          <img src="/exlogo.png" alt="" className="w-20 h-20" />
+        </div>
+        <div className="row-span-3 flex flex-col p-10 " >
+          <motion.a
+            href="/"
+            className="text-slate-50 text-sm"
+            whileHover={{ color: "red" }}
+          >
+            HOME
+          </motion.a>
+          <motion.a
+            href="#"
+            className="text-slate-50 text-sm"
+            whileHover={{ color: "red" }}
+          >
+            ABOUT
+          </motion.a>
+          <motion.a
+            href="/service"
+            className="text-slate-50 text-sm"
+            whileHover={{ color: "red" }}
+          >
+            SERVICE
+          </motion.a>
+          <motion.a
+            href="#"
+            className="text-slate-50 text-sm"
+            whileHover={{ color: "red" }}
+          >
+            CONTACT
+          </motion.a>
+        </div>
+        <div className="row-span-3 text-slate-50 p-10">
+          <div className="flex gap-3 items-center text-sm">
+            {" "}
+            <MdAttachEmail /> <span>INFO@EXMEDIA.IN</span>
+          </div>
+          <div className="flex gap-3 items-center text-sm">
+            {" "}
+            <FaMobileRetro /> <span>+919526123466</span>
+          </div>
+          <div className="flex gap-3 items-center text-sm">
+            {" "}
+            <FaLocationDot /> <span>KERALA & UAE</span>
+          </div>
+         
+        </div>
+        <div className="row-span-3 text-slate-50 flex flex-col p-10 text-sm">
+          <a href="#">INSTAGRAM</a>
+          <a href="#">FACEBOOK</a>
+          <a href="#">YOUTUBE</a>
+          <a href="#">TWITTER</a>
+          <a href="#">LINKED IN</a>
+          <a href="#">PRINTERS</a>
+          <a href="#">THREADS</a>
+        </div>
+        <div className="col-span-2 col-start-2 row-start-4 text-slate-50 text-xs">
+          <div className="flex gap-3 items-center justify-center ">
+            <FaRegCopyright /> <span>COPYRIGHT 2024 EXMEDIA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;
