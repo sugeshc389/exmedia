@@ -2,6 +2,13 @@
 import NavBar from "@/components/NavBar";
 import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+interface ServiceItem {
+  id: number;
+  title: string;
+  subTitle: string;
+  img: string;
+  desc: string;
+}
 
 const service = [
   {
@@ -27,8 +34,8 @@ const service = [
     desc: "your business goals with our target. Our team works collaboratively with yours to define your corporate aim and voice, key values, and vision statements. Our comprehensive branding and messaging strategies create a blueprint for the types of brand marketing initiatives your company requirements and need to build business share and enhance revenue consistently upward.",
   },
 ];
-const Single = ({ service }) => {
-  const ref = useRef();
+const Single: React.FC<{ service: ServiceItem }> = ({ service }) => {
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
   });
