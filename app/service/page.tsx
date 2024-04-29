@@ -1,7 +1,7 @@
 "use client";
 import NavBar from "@/components/NavBar";
 import React, { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform,MotionValue } from "framer-motion";
 interface ServiceItem {
   id: number;
   title: string;
@@ -9,6 +9,10 @@ interface ServiceItem {
   img: string;
   desc: string;
 }
+interface StyleProps {
+  y: MotionValue<number>;
+}
+
 
 const service = [
   {
