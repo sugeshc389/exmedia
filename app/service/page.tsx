@@ -1,6 +1,5 @@
-"use client";
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
 interface ServiceItem {
   id: number;
@@ -18,7 +17,7 @@ const Single: React.FC<{ service: ServiceItem }> = ({ service }) => {
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
-  const styleProps = { y };
+  const styleProps = { y: y as string }; // Explicitly cast y as string
 
   return (
     <section ref={ref} className="flex pl-[25%] ">
