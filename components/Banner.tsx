@@ -78,7 +78,7 @@ const Banner = () => {
         </motion.div>
         <motion.div
           className="sidingTextContainer hidden md:block"
-          variants={slideVariant}
+          variants={slideVariant as any}
           initial="initial"
           animate="animate"
         >
