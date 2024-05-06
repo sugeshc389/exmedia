@@ -49,19 +49,19 @@ const Branding = () => {
   const controlsExplain = useAnimation();
   const { ref, inView } = useInView();
 
-  const isMobile = window.innerWidth <= 640; // Adjust as per your mobile breakpoint
+  // const isMobile = window.innerWidth <= 640; // Adjust as per your mobile breakpoint
 
-  useEffect(() => {
-    if (!isMobile && inView) {
-      controlsTitle.start("show");
-      controlsImg.start("show");
-      controlsExplain.start("show");
-    } else {
-      controlsTitle.start("hidden");
-      controlsImg.start("hidden");
-      controlsExplain.start("hidden");
-    }
-  }, [controlsTitle, controlsImg, controlsExplain, inView, isMobile]);
+  // useEffect(() => {
+  //   if (!isMobile && inView) {
+  //     controlsTitle.start("show");
+  //     controlsImg.start("show");
+  //     controlsExplain.start("show");
+  //   } else {
+  //     controlsTitle.start("hidden");
+  //     controlsImg.start("hidden");
+  //     controlsExplain.start("hidden");
+  //   }
+  // }, [controlsTitle, controlsImg, controlsExplain, inView, isMobile]);
 
   return (
     <div className="p-6 -z-10">
