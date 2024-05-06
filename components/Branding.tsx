@@ -49,7 +49,7 @@ const Branding = () => {
   const controlsExplain = useAnimation();
   const { ref, inView } = useInView();
 
-  const isMobile = window.innerWidth <= 640; // Adjust as per your mobile breakpoint
+  const isMobile = window.innerWidth <= 640; 
 
   useEffect(() => {
     if (!isMobile && inView) {
