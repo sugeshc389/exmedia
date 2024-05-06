@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
 
+
 interface ServiceItem {
   id: number;
   title: string;
@@ -20,6 +21,7 @@ const Single: React.FC<{ service: ServiceItem }> = ({ service }) => {
 
   return (
     <section ref={ref} className="flex pl-[25%] ">
+      
       <div className="flex items-center justify-center w-[700px] h-[700px] gap-[50px] ">
         <img
           src={service.img}

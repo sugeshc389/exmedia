@@ -5,11 +5,11 @@ import WhoWeAre from "@/components/WhoWeAre";
 import Studio from "@/components/Studio";
 import Graphics from "@/components/Graphics";
 import Branding from "@/components/Branding";
-import MotionWrapper from "./motionProvider";
+// import MotionWrapper from "./motionProvider";
 
 export default function Home() {
   return (
-    <MotionWrapper>
+   
       <div>
         <section>
           <NavBar />
@@ -30,6 +30,6 @@ export default function Home() {
           <Branding />
         </section>
       </div>
-    </MotionWrapper>
+    
   );
 }
